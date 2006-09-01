@@ -18,7 +18,8 @@
 	is a node that has at least one directed edge for which this 
 	node serves as a sink.
 	
-	All nodes are indexed by the gene systematic names.
+	All nodes are indexed by the gene systematic names as given
+	in the primary source.
 
 	}
 \source{

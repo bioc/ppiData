@@ -12,8 +12,8 @@
 \description{
 	An instance of class graph, Cagney2001BPGraph is a graphNEL
 	object. The nodes are the union of viable baits (VB) and 
-	viable preys (VP) of the experiment conducted by Ito et al. 
-	2006. A viable bait is a node that has at least one directed 
+	viable preys (VP) of the experiment conducted by Cagney et al. 
+	2001. A viable bait is a node that has at least one directed 
 	edge for which this node serves as the source. A viable prey 
 	is a node that has at least one directed edge for which this 
 	node serves as a sink.
@@ -25,6 +25,10 @@
 	systematic name via the YEASTCOMMON2SYSTEMATIC environment
 	of the YEAST R-data package. If the mapping is one to many 
 	at any point, the first entry of the mapping is selected.
+	
+	For example: x --> (a,b); a --> (c,d); b --> (e,f), 
+	in our algorithm, x -------> c	
+
 	While this selection is arbitrary, there is no definitive 
 	way to select from the mappings without more information. If
 	more information concerning the experiment is given, the 
@@ -34,7 +38,7 @@
 	the Intact ID's were kept so that other methods can be employed 
 	for translation in the future. In all 0 VBs and 0 VPs could
 	not be mapped to the gene systematic names, and so retain the
-	Intact ID's.
+	Intact ID's for Cagney 2001.
 
 	}
 \source{

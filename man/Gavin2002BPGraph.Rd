@@ -39,6 +39,8 @@
 	If, on the other hand, one protein mapped to several different ORFs
 	we simple selected the first ORF in the list since there is no 
 	definitive process to make the choice un-arbitrary. 
+	
+	For example: x --> (a,b), then x ---> a in our algorithm.
 }
 \source{
 	The adjacency matrix for this graph can be found in the bioconductor
