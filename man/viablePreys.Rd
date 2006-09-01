@@ -37,7 +37,7 @@ List of 12
  $ Gavin2006 : chr [1:2551] "EBI-13145" "EBI-11337" "EBI-19558" "EBI-21748" ...
  $ Krogan2006: chr [1:5361] "YAL001C" "YAL002W" "YAL003W" "YAL005C" ...
 }
-
+\examples{
 data(viablePreys)
 }
 \keyword{datasets}
