@@ -37,6 +37,12 @@
 	the Intact ID's were kept so that other methods can be employed 
 	for translation in the future. In all 3 VBs  and 8 VPs could
 	not be mapped to the gene systematic names.
+
+	Lastly any self-interactions between identical proteins  
+	(homodimer relationships) have been removed from the graph. 
+	Therefore, any isolated vertex in this graph (if it exists)
+	were proteins only to have been found to interact
+	in homodimer relationships.
 	
 }
 \source{

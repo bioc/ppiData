@@ -21,6 +21,12 @@
 	All nodes are indexed by the gene systematic names as given
 	in the primary source.
 
+	Lastly any self-interactions between identical proteins  
+	(homodimer relationships) have been removed from the graph. 
+	Therefore, any isolated vertex in this graph (if it exists)
+	were proteins only to have been found to interact
+	in homodimer relationships.	
+
 	}
 \source{
 	The adjacency matrix for this graph can be found in the bioconductor

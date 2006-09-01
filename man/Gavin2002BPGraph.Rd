@@ -41,6 +41,12 @@
 	definitive process to make the choice un-arbitrary. 
 	
 	For example: x --> (a,b), then x ---> a in our algorithm.
+
+	Lastly any self-interactions between identical proteins  
+	(homodimer relationships) have been removed from the graph. 
+	Therefore, any isolated vertex in this graph (if it exists)
+	were proteins  only to have been found to interact
+	in homodimer relationships.
 }
 \source{
 	The adjacency matrix for this graph can be found in the bioconductor

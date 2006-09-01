@@ -39,6 +39,12 @@
 	not be mapped to the gene systematic names, and so retain the
 	Intact ID's.
 
+	Lastly any self-interactions between identical proteins  
+	(homodimer relationships) have been removed from the graph. 
+	Therefore, any isolated vertex in this graph (if it exists)
+	were proteins only to have been found to interact
+	in homodimer relationships.
+
 	}
 \source{
 	The sparse matrix adjacency matrix for this graph can be found in the bioconductor
