@@ -1,10 +1,11 @@
 \name{viablePrey}
 \alias{viablePrey}
+\alias{viableBaits}
 \docType{data}
-\title{A List of the viable preys in each bait to prey experiment}
+\title{Lists of viable prey or baits in each bait to prey dataset}
 \description{
-  	This named list consists of the viable preys which correspond
-	to each experimental bait to prey experiment. 
+These are named lists consisting of either the viable prey or the viable
+baits corresponding to each dataset. 
 
 	The names should be listed by the systematic gene names. If 
 	the systematic gene names could not be found, then a common 
@@ -15,31 +16,24 @@
 
 	Because we have chosen to supress the homodimer relationships
 	within the respective bait to prey directed graphs, there will
-	be proteins listed as viable preys which index isolated 
+	be proteins listed as viable prey which index isolated 
 	nodes in the graphs. These isolated nodes simply mean that 
 	these proteins were only seen to interact within homodimer
 	relationships.
 }
-\usage{data(viablePrey)}
-\format{
-  The format is:
-List of 12
- $ Ito2001BPGraph   : chr [1:2493] "EBI-34960" "EBI-38535" "EBI-38876" "EBI-36299" ...
- $ Cagney2001BPGraph: chr [1:40] "YER105C" "YDL020C" "YCR073C" "YIL007C" ...
- $ Tong2002BPGraph  : chr [1:59] "EBI-33845" "YER054C" "YIL045W" "YDR195W" ...
- $ Hazbun2003BPGraph: chr [1:1940] "EBI-5195" "EBI-31597" "EBI-31017" "EBI-852932" ...
- $ Zhao2005BPGraph  : chr [1:90] "YAR015W" "YAR019C" "YBL103C" "YBR089W" ...
- $ Uetz2000BPGraph1 : chr [1:630] "EBI-37713" "EBI-10698" "YBL043W" "YNL229C" ...
- $ Uetz2000BPGraph2 : chr [1:400] "EBI-34060" "EBI-392763" "YBR160W" "YJR132W" ...
- $ Gavin2002BPGraph : chr [1:1362] "YBR236C" "YNR016C" "YLR359W" "YMR300C" ...
- $ Ho2002BPGraph    : chr [1:1578] "YAL015C" "YAL017W" "YAL021C" "YAL036C" ...
- $ Krogan2004BPGraph: chr [1:485] "YJL109C" "YGL173C" "YDR324C" "YGR128C" ...
- $ Gavin2006BPGraph : chr [1:2551] "EBI-13145" "EBI-11337" "EBI-19558" "EBI-21748" ...
- $ Krogan2006BPGraph: chr [1:5361] "YAL001C" "YAL002W" "YAL003W" "YAL005C" ...
+\usage{
+data(viableBaits)
+data(viablePrey)
+}
+\format{A named list. Each element is a character vector of the viable
+  prey (or baits) for the corresponding dataset.
 }
 
 \examples{
 data(viablePrey)
-## maybe str(viablePrey) ; plot(viablePrey) ...
+data(viableBaits)
+names(viablePrey)
+names(viableBaits)
+viableBaits[[1]][1:5]
 }
 \keyword{datasets}
