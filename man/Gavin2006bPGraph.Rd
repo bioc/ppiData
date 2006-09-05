@@ -1,7 +1,7 @@
 \name{Gavin2006BPGraph}
 \alias{Gavin2006BPGraph}
 \docType{data}
-\title{A directed Graph for the Bait to Prey Interaction
+\title{A directed Graph for the AP-MS Bait to Prey Interaction
 	data detected by Gavin et al. 2006.}
 
 \usage{data(Gavin2006BPGraph)}
@@ -12,7 +12,7 @@
 \description{
 	An instance of class graph, Gavin2006BPGraph is a graphNEL
 	object. The nodes are the union of viable baits (VB) and 
-	viable preys (VP) of the experiment conducted by Gavin et al. 
+	viable prey (VP) of the experiment conducted by Gavin et al. 
 	2006. A viable bait is a node that has at least one directed 
 	edge for which this node serves as the source. A viable prey 
 	is a node that has at least one directed edge for which this 

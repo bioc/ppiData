@@ -1,7 +1,7 @@
 \name{Uetz2000BPGraph2}
 \alias{Uetz2000BPGraph2}
 \docType{data}
-\title{A directed Graph for the Bait to Prey Interaction
+\title{A directed Graph for the Y2H Bait to Prey Interaction
 	data detected by Uetz et al. 2000.}
 
 \usage{data(Uetz2000BPGraph2)}
@@ -12,7 +12,7 @@
 \description{
 	An instance of class graph, Uetz2000BPGraph2 is a graphNEL
 	object. The nodes are the union of viable baits (VB) and 
-	viable preys (VP) of the experiment conducted by Uetz et al. 
+	viable prey (VP) of the experiment conducted by Uetz et al. 
 	2000. A viable bait is a node that has at least one directed 
 	edge for which this node serves as the source. A viable prey 
 	is a node that has at least one directed edge for which this 

@@ -1,7 +1,7 @@
 \name{Ito2001BPGraph}
 \alias{Ito2001BPGraph}
 \docType{data}
-\title{A directed Graph for the Bait to Prey Interaction
+\title{A directed Graph for the Y2H Bait to Prey Interaction
 	data detected by Ito et al. 2001.}
 
 \usage{data(Ito2001BPGraph)}
@@ -12,7 +12,7 @@
 \description{
 	An instance of class graph, Ito2001BPGraph is a graphNEL
 	object. The nodes are the union of viable baits (VB) and 
-	viable preys (VP) of the experiment conducted by Ito et al. 
+	viable prey (VP) of the experiment conducted by Ito et al. 
 	2001. A viable bait is a node that has at least one directed 
 	edge for which this node serves as the source. A viable prey 
 	is a node that has at least one directed edge for which this 

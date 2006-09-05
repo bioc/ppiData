@@ -1,7 +1,7 @@
 \name{Zhao2005BPGraph}
 \alias{Zhao2005BPGraph}
 \docType{data}
-\title{A directed Graph for the Bait to Prey Interaction
+\title{A directed Graph for the Y2H Bait to Prey Interaction
 	data detected by Zhao et al. 2005.}
 
 \usage{data(Zhao2005BPGraph)}
@@ -12,7 +12,7 @@
 \description{
 	An instance of class graph, Zhao2005BPGraph is a graphNEL
 	object. The nodes are the union of viable baits (VB) and 
-	viable preys (VP) of the experiment conducted by Zhao et al. 
+	viable prey (VP) of the experiment conducted by Zhao et al. 
 	2005. A viable bait is a node that has at least one directed 
 	edge for which this node serves as the source. A viable prey 
 	is a node that has at least one directed edge for which this 
