@@ -49,6 +49,8 @@ how to do some simply statistical computations.
 <<loadlib, echo=FALSE, results = hide>>=
 
 library(ppiData)
+library(ppiStats)
+library(YEAST)
 
 @
 
