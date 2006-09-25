@@ -15,9 +15,10 @@ baits corresponding to each dataset.
 	IntAct Codes will always be listed first if they exist.
 
 	Because we have chosen to supress the homodimer relationships
-	within the respective bait to prey directed graphs, there will
-	be proteins listed as viable prey which index isolated 
-	nodes in the graphs. These isolated nodes simply mean that 
+	within the respective bait to bait or viable prey directed
+        graphs, there will be proteins listed as viable prey which index
+        isolated nodes in
+        the graphs. These isolated nodes simply mean that 
 	these proteins were only seen to interact within homodimer
 	relationships.
 }
