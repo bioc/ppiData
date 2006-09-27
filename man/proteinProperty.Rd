@@ -62,11 +62,9 @@
    For more details, please visit the SGD website.
 }
 \source{
-  ftp://genome-ftp.stanford.edu/pub/yeast/protein_info/protein_properties.tab
+  ftp://genome-ftp.stanford.edu/pub/yeast/protein\_info/protein\_properties.tab
 }
-\references{
 
-}
 \examples{
 data(proteinProperty)
 }

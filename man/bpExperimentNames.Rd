@@ -7,7 +7,7 @@
 \usage{data(bpGraphNames)}
 \format{
   The format is:
- chr "bpGraphNames"
+ chr "bpExperimentNames"
 }
 \description{
 	This is a character vector of the names of the graph objects stored 
@@ -16,8 +16,8 @@
 }
 
 \examples{
-data(bpGraphNames)
-bpGraphNames
+data(bpExperimentNames)
+bpExperimentNames
 }
 
 \keyword{datasets}

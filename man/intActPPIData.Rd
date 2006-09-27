@@ -1,5 +1,5 @@
-\name{intactPPIData}
-\alias{intactPPIData}
+\name{intActPPIData}
+\alias{intActPPIData}
 \docType{data}
 \title{A data set documenting the output of collectIntactPPIData}
 
