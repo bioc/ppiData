@@ -7,7 +7,7 @@
 \usage{data(Gavin2006BPGraph)}
 \format{
   The format is:
- chr "Gavin2006BPGraph"
+  graphNEL "Gavin2006BPGraph"
 }
 \description{
 	An instance of class graph, Gavin2006BPGraph is a graphNEL
@@ -38,11 +38,11 @@
 	for translation in the future. In all 3 VBs  and 8 VPs could
 	not be mapped to the gene systematic names.
 
-	Lastly any self-interactions between identical proteins  
-	(homodimer relationships) have been removed from the graph. 
-	Therefore, any isolated vertex in this graph (if it exists)
-	were proteins only to have been found to interact
-	in homodimer relationships.
+	These graphs are not simple. While we chose not to present data
+        with multiple edges between nodes (i.e. if bait b found prey p
+        with multiplicity k, we do not assign k directed edges from b to
+        p, only a single edge). We do, however, allow self loops to
+        detail homodimer relationships.
 	
 }
 \source{

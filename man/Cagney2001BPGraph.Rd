@@ -7,7 +7,7 @@
 \usage{data(Cagney2001BPGraph)}
 \format{
   The format is:
- chr "Cagney2001BPGraph"
+  graphNEL "Cagney2001BPGraph"
 }
 \description{
 	An instance of class graph, Cagney2001BPGraph is a graphNEL
@@ -40,11 +40,11 @@
 	not be mapped to the gene systematic names, and so retain the
 	Intact ID's for Cagney 2001.
 
-	Lastly any self-interactions between identical proteins  
-	(homodimer relationships) have been removed from the graph. 
-	Therefore, any isolated vertex in this graph (if it exists)
-	were proteins only to have been found to interact
-	in homodimer relationships.
+	These graphs are not simple. While we chose not to present data
+        with multiple edges between nodes (i.e. if bait b found prey p
+        with multiplicity k, we do not assign k directed edges from b to
+        p, only a single edge). We do, however, allow self loops to
+        detail homodimer relationships.
 
 	}
 \source{
@@ -53,7 +53,7 @@
 }
 \references{
 	Two-hybrid analysis of the Saccharomyces cerevisiae 26S proteasome.	
-	Physiol Genomics. 2001 Oct 10;7(1):27-34.Click here to read 
+	Physiol Genomics. 2001 Oct 10;7(1):27-34.
 
 }
 \examples{
