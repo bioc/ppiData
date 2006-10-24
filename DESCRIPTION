@@ -1,7 +1,6 @@
 Package: ppiData
 Title: A package that contains the bait to prey directed graphs for protein-protein interactions.
-Version: 0.0.8
-Date: 2006-09-04
+Version: 0.0.9
 Author: Tony Chiang
 LazyLoad: TRUE
 LazyData: TRUE
@@ -9,4 +8,4 @@ Depends: Rgraphviz, graph
 Suggests:YEAST
 Description: This package contains the directed graphs for protein interaction data as derived from Y2H and APMS as well as the code used to obtain the y2h data from IntAct Repository.
 Maintainer: Tony Chiang <tchiang@fhcrc.org>
-License: GPL
+License: Artistic, Version 2.0
