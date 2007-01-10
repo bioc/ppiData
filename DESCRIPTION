@@ -7,5 +7,6 @@ LazyData: TRUE
 Depends: Rgraphviz, graph
 Suggests:YEAST
 Description: This package contains the directed graphs for protein interaction data as derived from Y2H and APMS as well as the code used to obtain the y2h data from IntAct Repository.
+biocViews: ExperimentData
 Maintainer: Tony Chiang <tchiang@fhcrc.org>
 License: Artistic, Version 2.0
