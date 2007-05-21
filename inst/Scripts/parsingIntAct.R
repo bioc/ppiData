@@ -1,33 +1,35 @@
 ##This file will take the parsed IntAct Data and create the 
 ##graph structure that we want:
-
-library(Rintact)
+parsingIntAct <- function(xmlFile){
+###library(Rintact)
 
 ##you need to paste the path to the XML file in the following line
-xml <- "../../../../../../../../downloads/all/psi25/species/yeast_small-03.xml"
+xml <- xmlFile
 
-gavin06 <- psi25interaction(xml)
+  ##"../../../../../../../../downloads/all/psi25/species/yeast_small-03.xml"
 
-gavin06 <- gavin06[[1]]
+xmlObject <- psi25interaction(xml)
 
-baits <- sapply(gavin06@interactions, function(x) x@bait)
+xmlObject <- xmlObject[[1]]
+
+baits <- sapply(xmlObject@interactions, function(x) x@bait)
 
 ##the following list will store each pull down separately
-gavin06L <- vector("list", length = length(baits))
+xmlObjectL <- vector("list", length = length(baits))
 
 for(i in 1:length(baits)){
-  gavin06L[[i]] <- gavin06@interactions[[i]]@prey
+  xmlObjectL[[i]] <- xmlObject@interactions[[i]]@prey
 }
 
-names(gavin06L) <- baits
+names(xmlObjectL) <- baits
 
-fac <- vector(length=length(unlist(gavin06L)))
+fac <- vector(length=length(unlist(xmlObjectL)))
 
 i <- 1
 j <- 1
 
 while(i < length(fac)){
-  pullDownSize <- length(gavin06L[[j]])
+  pullDownSize <- length(xmlObjectL[[j]])
   if(length(i:(i+pullDownSize-1)) == pullDownSize){
     fac[i:(i+pullDownSize-1)] <-
     rep(baits[j], pullDownSize)}
@@ -39,4 +41,6 @@ while(i < length(fac)){
 ##the following list will combine pull downs of the same
 ##bait but will still keep multiplicity of prey..i.e. if the
 ##prey was found in 2 pulldowns, it will be recored twice 
-gavin06List <- split(unlist(gavin06L), fac)
+xmlObjectList <- split(unlist(xmlObjectL), fac)
+return(xmlObjectList)
+}
