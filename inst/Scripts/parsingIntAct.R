@@ -22,6 +22,9 @@ parsingIntAct <- function(xmlFiles, confidence=NULL){
       interaction <- xmlObject@interactions[ic]
     }
 
+    else{
+      interaction <- xmlObject@interactions
+    }
     ##the following list will store each pull down separately
     baits <- sapply(interaction, function(x) x@bait)
     xmlObjectL <- vector("list", length = length(baits))
