@@ -17,7 +17,6 @@ map2Systematic2(allProt, tableList, sWAC)
     database}
   \item{sWAC}{The data file sWAC2Sys}
 }
-}
 \value{
   A character vector - The return value is a mapping of each Intact ID
   to it's respecting systematic name.
