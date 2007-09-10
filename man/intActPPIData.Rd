@@ -3,7 +3,7 @@
 \docType{data}
 \title{A data set documenting the output of collectIntactPPIData}
 
-\usage{data(intactPPIData)}
+\usage{data(intActPPIData)}
 \format{
   The format is:
  chr "y2h"

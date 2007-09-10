@@ -23,7 +23,7 @@ to suffer from systematic bias due to the bait to prey systems.
 	relationships.
 }
 \usage{
-data(stocasticBaits)
+data(stochasticBaits)
 }
 \format{A named list. Each element is a character vector of the viable
   baits for the corresponding dataset.

@@ -2,9 +2,9 @@
 \alias{bpExperimentNames}
 \docType{data}
 \title{A Character Vector Containing the Names of the
-	12 Graph Objects Stored in this Data Package}
+	13 Graph Objects Stored in this Data Package}
 
-\usage{data(bpGraphNames)}
+\usage{data(bpExperimentNames)}
 \format{
   The format is:
  chr "bpExperimentNames"

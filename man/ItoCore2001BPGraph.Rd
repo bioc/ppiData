@@ -1,19 +1,20 @@
-\name{Ito2001BPGraph}
-\alias{Ito2001BPGraph}
+\name{ItoCore2001BPGraph}
+\alias{ItoCore2001BPGraph}
 \docType{data}
 \title{A directed Graph for the Y2H Bait to Prey Interaction
 	data detected by Ito et al. 2001.}
 
-\usage{data(Ito2001BPGraph)}
+\usage{data(ItoCore2001BPGraph)}
 \format{
   The format is:
-  graphNEL "Ito2001BPGraph"
+  graphNEL "ItoCore2001BPGraph"
 }
 \description{
-	An instance of class graph, Ito2001BPGraph is a graphNEL
+	An instance of class graph, ItoCore2001BPGraph is a graphNEL
 	object. The nodes are the union of viable baits (VB) and 
 	viable prey (VP) of the experiment conducted by Ito et al. 
-	2001. A viable bait is a node 
+	2001 which they annotated as the core dataset by having verified 
+	the bait-prey interaction at least 3 times. A viable bait is a node 
 	that has at least one directed edge for which this node serves as 
 	the source. A viable prey is a node that has at least one directed 
 	edge for which this node serves as a sink.
@@ -55,7 +56,7 @@
 	Proc Natl Acad Sci U S A. 2001 Apr 10;98(8):4569-74. Epub 2001 Mar 13.
 }
 \examples{
-data(Ito2001BPGraph)
+data(ItoCore2001BPGraph)
 }
 
 \keyword{datasets}
