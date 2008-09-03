@@ -2,8 +2,8 @@
 
 library(ppiData)
 library(ppiStats)
-library(YEAST)
-yc2s <- as.list(YEASTCOMMON2SYSTEMATIC)
+library(org.Sc.sgd.db)
+yc2s <- as.list(org.Sc.sgdCOMMON2SYSTEMATIC)
 data(y2hSysGW)
 
 

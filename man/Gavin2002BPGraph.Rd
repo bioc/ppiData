@@ -21,8 +21,8 @@
 	One key fact is that Gavin et al. Used the protein common names
 	when they recorded the data. As we have chosen to use the gene
 	systematic names, we had to map from these common names to 
-	systematic names. We used the  YEASTCOMMON2SYSTEMATIC environment
-	of the YEAST R-data package to translate from common protein
+	systematic names. We used the  org.Sc.sgdCOMMON2ORF environment
+	of the org.Sc.sgd R-data package to translate from common protein
 	names to systematic gene names.
 
 	We encountered two mappings which were not

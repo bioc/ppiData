@@ -1,12 +1,12 @@
 \name{intAct2Sys}
 \alias{intAct2Sys}
 
-\title{A function that maps the Intact ID's to the first YEAST
-  systematic name using the YEAST package}
+\title{A function that maps the Intact ID's to the first org.Sc.sgd
+  systematic name using the org.Sc.sgd package}
 \description{
 This function takse the Intact ID's maps to the yeast common names via intact
-repository and uses the YEAST package to map the
-common names to the YEAST Systematic names. There is problems if more
+repository and uses the org.Sc.sgd package to map the
+common names to the org.Sc.sgd Systematic names. There is problems if more
 than one systematic name corresponds to the common name. This function
 will simply always return the first name given by each mapping: from
 Intact to common names and also from common names to systematic names.

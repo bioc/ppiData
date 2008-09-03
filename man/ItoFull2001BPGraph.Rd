@@ -22,8 +22,8 @@
 	repository. The Intact repository assigns an Intact specific
 	code for each VB and each VP. Each Intact ID is mapped to 
 	the a SGD ID (if available) and then mapped to the gene 
-	systematic name via the YEASTCOMMON2SYSTEMATIC environment
-	of the YEAST R-data package. If the mapping is one to many 
+	systematic name via the org.Sc.sgdCOMMON2ORF environment
+	of the org.Sc.sgd R-data package. If the mapping is one to many 
 	at any point, the first entry of the mapping is selected.
 	While this selection is arbitrary, there is no definitive 
 	way to select from the mappings without more information. If

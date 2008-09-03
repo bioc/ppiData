@@ -5,8 +5,8 @@
 possible}
 \description{
 This function takse the IntAct accension numbers and maps to the yeast common names via intact
-repository and uses the YEAST package to map the
-common names to the YEAST Systematic names.
+repository and uses the org.Sc.sgd package to map the
+common names to the org.Sc.sgd Systematic names.
 }
 \usage{
 map2Systematic(allProt, tableList, sWAC)

@@ -50,7 +50,7 @@ how to do some simply statistical computations.
 
 library(ppiData)
 library(ppiStats)
-library(YEAST)
+library(org.Sc.sgd.db)
 
 @
 
