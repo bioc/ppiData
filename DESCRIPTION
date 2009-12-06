@@ -4,7 +4,7 @@ Version: 0.1.14
 Author: Tony Chiang
 LazyLoad: TRUE
 LazyData: TRUE
-Depends: Rgraphviz, graph
+Depends: graph
 Suggests: org.Sc.sgd.db, ppiStats
 Description: This package contains the directed graphs for protein interaction data as derived from Y2H and APMS as well as the code used to obtain the y2h data from IntAct Repository.
 biocViews: ExperimentData
