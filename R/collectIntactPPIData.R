@@ -1,3 +1,24 @@
+
+loop <- function(n, b2pList, check1, check2){
+    ##Later we will use the bait-prey pairs to build either a data.frame, an adjacency
+    ##matrix, or a list of matrices. From the b2pList, we simple extract the bait element
+    ##and then the prey element.
+    indexSetAll <- vector("list", length = n)
+    for (i in 1:n){
+
+        indexSet <- vector("list", length = length(b2pList[[i]]))
+        for(j in 1:length(indexSet)){
+            indexSet[[j]] = c(b2pList[[i]][[j]][check1[[i]][[j]], "interactor"],
+                              b2pList[[i]][[j]][check2[[i]][[j]], "interactor"])
+            #print(indexSet[[j]])
+        }
+
+        indexSetAll[[i]] <- indexSet
+    }
+    indexSetAll
+}
+
+
 collectIntactPPIData <- function(intactID = c("EBI-375746", "EBI-531419", "EBI-295760", "EBI-698096",
                                       "EBI-592695", "EBI-476385", "EBI-476699", "EBI-493706", "EBI-620118",
                                       "EBI-619785", "EBI-492533", "EBI-492535", "EBI-697014", "EBI-538313",
@@ -69,22 +90,11 @@ collectIntactPPIData <- function(intactID = c("EBI-375746", "EBI-531419", "EBI-2
 
     check2 <- lapply(b2pList, function(x){lapply(x, function(y){which(y[,"role"] == "prey")})})
 
-    ##Later we will use the bait-prey pairs to build either a data.frame, an adjacency
-    ##matrix, or a list of matrices. From the b2pList, we simple extract the bait element
-    ##and then the prey element.
-    indexSetAll <- vector("list", length = n)
-    for (i in 1:n){
 
-        indexSet <- vector("list", length = length(b2pList[[i]]))
-        for(j in 1:length(indexSet)){
-            indexSet[[j]] = c(b2pList[[i]][[j]][check1[[i]][[j]], "interactor"],
-                              b2pList[[i]][[j]][check2[[i]][[j]], "interactor"])
-            #print(indexSet[[j]])
-        }
+    ## DUNNO
+    indexSetAll <- loop(n, b2pList, check1, check2)
 
-        indexSetAll[[i]] <- indexSet
-    }
-
+    
     names(indexSetAll) <- shortL
 
     ##We create a list of all the baits for each experiment.
