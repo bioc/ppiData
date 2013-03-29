@@ -30,7 +30,4 @@ intAct2Sys(prot2Sys, bpSysL)
 
 \author{T Chiang}
 
-\examples{
-
-}
 \keyword{datagen}

@@ -1,5 +1,5 @@
 
-loop <- function(n, b2pList, check1, check2){
+.loop <- function(n, b2pList, check1, check2){
     ##Later we will use the bait-prey pairs to build either a data.frame, an adjacency
     ##matrix, or a list of matrices. From the b2pList, we simple extract the bait element
     ##and then the prey element.
@@ -92,7 +92,7 @@ collectIntactPPIData <- function(intactID = c("EBI-375746", "EBI-531419", "EBI-2
 
 
     ## DUNNO
-    indexSetAll <- loop(n, b2pList, check1, check2)
+    indexSetAll <- .loop(n, b2pList, check1, check2)
 
     
     names(indexSetAll) <- shortL

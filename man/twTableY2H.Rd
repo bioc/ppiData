@@ -19,13 +19,6 @@ times the proteins were found in neither experiments.
   (n11,n12,n21,n22), and the columns are indexed by the elements
   of X.
 }
-\details{
-}
-\source{
-
-}
-\references{
-}
 \examples{
 data(twTableY2H)
 }
