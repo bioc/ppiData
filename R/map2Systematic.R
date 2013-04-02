@@ -3,10 +3,10 @@ map2Systematic <- function(allProt, tableList, sWAC){
 
     ##The baitSystematic vector will be a mapping of the Intact codes to Yeast Systematic Names
     protSystematic <- vector(length = length(allProt))
-    yeast2Sys <- AnnotationDbi:::as.list(org.Sc.sgdCOMMON2ORF)
+    yeast2Sys <- as.list(org.Sc.sgdCOMMON2ORF)
     yeast2Sys <- yeast2Sys[!is.na(yeast2Sys)]
-    yeastAlias <- names(unlist(AnnotationDbi:::as.list(org.Sc.sgdALIAS)))
-    yro <- unlist(AnnotationDbi:::as.list(org.Sc.sgdREJECTORF))
+    yeastAlias <- names(unlist(as.list(org.Sc.sgdALIAS)))
+    yro <- unlist(as.list(org.Sc.sgdREJECTORF))
     #notfound <- vector()
     #notfoundSGD <- vector()
     #notfound2 <- vector()
