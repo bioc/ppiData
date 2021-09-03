@@ -1,13 +1,16 @@
 Package: ppiData
-Title: A package that contains the bait to prey directed graphs for protein-protein interactions.
+Title: A package that contains the bait to prey directed graphs for
+  protein-protein interactions
 Version: 0.31.0
 Author: Tony Chiang 
 LazyLoad: TRUE
 LazyData: TRUE
 Depends: graph
 Imports: AnnotationDbi
-Suggests: org.Sc.sgd.db, ppiStats
-Description: This package contains the directed graphs for protein interaction data as derived from Y2H and APMS as well as the code used to obtain the y2h data from IntAct Repository.
+Suggests: org.Sc.sgd.db, ppiStats, rmarkdown, knitr, BiocStyle
+Description: This package contains the directed graphs for protein interaction
+  data as derived from Y2H and APMS. It also includes the code used to obtain
+  the y2h data from IntAct Repository.
 biocViews: ExperimentData
 Maintainer: Bioconductor Package Maintainer <maintainer@bioconductor.org>
 License: Artistic-2.0
