@@ -18,22 +18,19 @@
     indexSetAll
 }
 
+.intactIDS <- c(
+    "EBI-375746", "EBI-531419", "EBI-295760", "EBI-698096", "EBI-592695",
+    "EBI-476385", "EBI-476699", "EBI-493706", "EBI-620118", "EBI-619785",
+    "EBI-492533", "EBI-492535", "EBI-697014", "EBI-538313", "EBI-538324",
+    "EBI-531492", "EBI-526219", "EBI-491968", "EBI-707901", "EBI-74070",
+    "EBI-603898", "EBI-597864", "EBI-455820", "EBI-457380", "EBI-457455",
+    "EBI-79957",  "EBI-603955", "EBI-600030", "EBI-600812", "EBI-601450",
+    "EBI-75443",  "EBI-727915", "EBI-607722", "EBI-525791", "EBI-476132",
+    "EBI-49802",  "EBI-491628", "EBI-491642", "EBI-783101", "EBI-762635",
+    "EBI-389903", "EBI-392769"
+)
 
-collectIntactPPIData <- function(intactID = c("EBI-375746", "EBI-531419", "EBI-295760", "EBI-698096",
-                                      "EBI-592695", "EBI-476385", "EBI-476699", "EBI-493706", "EBI-620118",
-                                      "EBI-619785", "EBI-492533", "EBI-492535", "EBI-697014", "EBI-538313",
-                                      "EBI-538324", "EBI-531492", "EBI-526219", "EBI-491968", "EBI-707901",
-                                      "EBI-74070",  "EBI-603898", "EBI-597864", "EBI-455820", "EBI-457380",
-                                      "EBI-457455", "EBI-79957",  "EBI-603955", "EBI-600030", "EBI-600812",
-                                      "EBI-601450", "EBI-75443",  "EBI-727915", "EBI-607722", "EBI-525791",
-                                      "EBI-476132", "EBI-49802",  "EBI-491628", "EBI-491642",
-                                      "EBI-783101", "EBI-762635",
-                                      "EBI-389903", "EBI-392769")){
-
-
-    options(error=recover)
-    #fileToRead <- system.file("data", "tableList.rda", package = "y2hStat")
-    #load(fileToRead)
+collectIntactPPIData <- function(intactID = .intactIDS) {
     dataenv <- new.env(parent = emptyenv())
     data("tableList", envir = dataenv)
     tableList <- dataenv[["tableList"]]

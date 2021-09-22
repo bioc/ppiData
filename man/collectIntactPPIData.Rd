@@ -11,7 +11,8 @@ collectIntactPPIData(intactID)
 
 \arguments{
   \item{intactID}{A character vector of the Intact ID's that reference
-    the particular experiment needed to be parsed.}
+    the particular experiment needed to be parsed; defaults to \code{.intactIDS}
+    vector use \code{ppiData:::.intactIDS} to inspect}
 }
 \details{
   The collectIntactPPIData is a general function that reads the R data file
@@ -43,8 +44,9 @@ collectIntactPPIData(intactID)
 \author{T Chiang}
 \examples{
 
-  inTactData <- collectIntactPPIData(c("EBI-375746", "EBI-531419",
-                                    "EBI-295760", "EBI-698096"))
+  inTactData <- collectIntactPPIData(
+        c("EBI-375746", "EBI-531419", "EBI-295760", "EBI-698096")
+  )
 
 }
 \keyword{datagen}
