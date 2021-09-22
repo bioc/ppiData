@@ -18,17 +18,17 @@ map2Systematic <- function(allProt, tableList, sWAC){
         ProtN <- allProt[i]
         
         whichProt <- tableList[["ac2xref"]][, "ac"] %in% ProtN
-        subTable <- tableList[["ac2xref"]][whichProt,1:4]
-        #print(subTable)
-        onlyWantSgd = which(subTable[,"db"] == "sgd")
-        ac2SgdCode = split(subTable[onlyWantSgd,4], subTable[onlyWantSgd,1])
-        ac2SgdCode <- lapply(ac2SgdCode, unique)
-        sgdC <- unlist(ac2SgdCode)
-        sgdC <- unique(sgdC)
-        #print(sgdC)
-        #print(ProtN)
-        #print(i)
-        
+        if (!length(whichProt)) {
+            sgdC <- whichProt
+        } else {
+            subTable <- tableList[["ac2xref"]][whichProt,1:4]
+            onlyWantSgd = which(subTable[,"db"] == "sgd")
+            ac2SgdCode = split(subTable[onlyWantSgd,4], subTable[onlyWantSgd,1])
+            ac2SgdCode <- lapply(ac2SgdCode, unique)
+            sgdC <- unlist(ac2SgdCode)
+            sgdC <- unique(sgdC)
+        }
+
         if (length(sgdC) == 1){
 
             if (!is.null(yeast2Sys[[sgdC]])){
