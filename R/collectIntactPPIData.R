@@ -34,8 +34,11 @@ collectIntactPPIData <- function(intactID = c("EBI-375746", "EBI-531419", "EBI-2
     options(error=recover)
     #fileToRead <- system.file("data", "tableList.rda", package = "y2hStat")
     #load(fileToRead)
-    data(tableList)
-    data(sWAC2Sys)
+    dataenv <- new.env(parent = emptyenv())
+    data("tableList", envir = dataenv)
+    tableList <- dataenv[["tableList"]]
+    data("sWAC2Sys", envir = dataenv)
+    sWAC2Sys <- dataenv[["sWAC2Sys"]]
     
     sLabel <- which(tableList[["acInfo"]][, "ac"] %in% intactID)
     names(sLabel) <- tableList[["acInfo"]][sLabel, "ac"]
