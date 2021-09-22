@@ -1,7 +1,7 @@
 Package: ppiData
 Title: A package that contains the bait to prey directed graphs for
   protein-protein interactions
-Version: 0.31.2
+Version: 0.31.3
 Author: Tony Chiang 
 Depends: graph
 Imports: AnnotationDbi
