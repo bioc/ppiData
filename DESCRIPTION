@@ -13,4 +13,3 @@ biocViews: ExperimentData
 Maintainer: Bioconductor Package Maintainer <maintainer@bioconductor.org>
 License: Artistic-2.0
 VignetteBuilder: knitr
-

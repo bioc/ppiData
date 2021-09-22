@@ -1,2 +1,4 @@
+import(graph)
 importFrom(AnnotationDbi, as.list)
+importFrom(utils, data, recover)
 exportPattern(".")
