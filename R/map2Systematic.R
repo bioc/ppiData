@@ -12,11 +12,11 @@ map2Systematic <- function(allProt, tableList, sWAC){
     #notfound2 <- vector()
     #notfound2SGD <- vector()
     one2Many <- vector("list", length = length(allProt))
-    
+
     for(i in 1:length(allProt)){
 
         ProtN <- allProt[i]
-        
+
         whichProt <- tableList[["ac2xref"]][, "ac"] %in% ProtN
         if (!length(whichProt)) {
             sgdC <- whichProt
@@ -33,23 +33,23 @@ map2Systematic <- function(allProt, tableList, sWAC){
 
             if (!is.null(yeast2Sys[[sgdC]])){
                 protSystematic[i] <- yeast2Sys[[sgdC]][1]
-                
+
                 one2Many[[i]] <- yeast2Sys[[sgdC]]
-                
+
             }
-            
+
             else {
 
-                
-                
+
+
                 if(sgdC %in% yeastAlias || sgdC %in% yro){
                     protSystematic[i] <- sgdC
                     one2Many[[i]] <- sgdC
                 }
-                
+
                 else{
 
-                 
+
 
                   if(substr(sgdC,1,1)=="Y"){
                         protSystematic[i] <- sgdC
@@ -80,7 +80,7 @@ map2Systematic <- function(allProt, tableList, sWAC){
               }
             }
         }
-        
+
         else{
             #print("here")
             if(length(sgdC)==0){
@@ -101,7 +101,7 @@ map2Systematic <- function(allProt, tableList, sWAC){
                     }
 
 
-                    
+
                 }
 
                 else{
@@ -113,14 +113,14 @@ map2Systematic <- function(allProt, tableList, sWAC){
             else {
                 #print("where")
                 one2Many[[i]] <- list()
-                
+
                 for(k in 1:length(sgdC)){
                     if(!is.null(yeast2Sys[[sgdC[k]]])){
                         #print("i should get here once")
                         one2Many[[i]][[sgdC[k]]] <- yeast2Sys[[sgdC[k]]]
-                
-                 
-                 
+
+
+
                     }
                     else{
 
@@ -131,13 +131,13 @@ map2Systematic <- function(allProt, tableList, sWAC){
                             one2Many[[i]][[sgdC[k]]] <- "ND"
                         }
                     }
-                
+
                 }
             }
         }
         #print(one2Many[[ProtN]])
     }
-    
+
 
     #protSystematic
     names(one2Many) = allProt

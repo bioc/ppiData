@@ -36,19 +36,19 @@ collectIntactPPIData <- function(intactID = .intactIDS) {
     tableList <- dataenv[["tableList"]]
     data("sWAC2Sys", envir = dataenv)
     sWAC2Sys <- dataenv[["sWAC2Sys"]]
-    
+
     sLabel <- which(tableList[["acInfo"]][, "ac"] %in% intactID)
     names(sLabel) <- tableList[["acInfo"]][sLabel, "ac"]
     shortL <- unique(tableList[["acInfo"]][sLabel[intactID], "shortLabel"])
     shortLabel <- shortL
-        
+
     n <- length(intactID)
 
 
     ##We chose all the id's that were either labelled bait or prey
     isBait <- tableList[["interaction2interactor"]][, "role"] == "bait"
     isPrey <- tableList[["interaction2interactor"]][, "role"] == "prey"
-    
+
     ##For each experiment, we wanted to collect every interaction involved;
     ##So for each experiment, there will be k interactions...we want them all
     ##Here we simple get the row indices...
@@ -63,28 +63,28 @@ collectIntactPPIData <- function(intactID = .intactIDS) {
 
     ##Now we go to another table. We want to find all the players in the interactions we
     ##have collected above. The following returns a logical...we will get the row index
-    ##if the interaction is the one in which we are interested: 
+    ##if the interaction is the one in which we are interested:
 
     interactor <- lapply(interaction, function(x)
       {tableList[["interaction2interactor"]][,"interaction"]%in% x})
-    
+
     ##Now we go into the same table as above; for each interaction, we want only those
     ##players corresponding to that interaction...since this is y2h, everyone element
     ##should only have two items...here we merely get the row indices
 
     b2p <- lapply(interaction,function(x){
         lapply(x, function(y){which(tableList[["interaction2interactor"]][, "interaction"] == y)})})
-    
+
     ##In this list, we systematically build our interactions. We take the double row numbers
     ##collected above, and create a list of interactions.
-    
+
     b2pList <- lapply(b2p, function(x){
         lapply(x, function(y){tableList[["interaction2interactor"]][y,]})})
-                      
+
     ##This checks to see which element in b2pList is the bait
 
     check1 <- lapply(b2pList, function(x) {lapply(x, function(y){which(y[,"role"] == "bait")})})
-                     
+
 
     ##This checks for the prey
 
@@ -94,7 +94,7 @@ collectIntactPPIData <- function(intactID = .intactIDS) {
     ## DUNNO
     indexSetAll <- .loop(n, b2pList, check1, check2)
 
-    
+
     names(indexSetAll) <- shortL
 
     ##We create a list of all the baits for each experiment.
@@ -123,20 +123,20 @@ collectIntactPPIData <- function(intactID = .intactIDS) {
     ##This method will still leave the user with certain proteins that need
     ##to be mapped by hand!
 
-    
+
     baitsSystematic <- map2Systematic(allProt = allBaits, tableList = tableList, sWAC = sWAC2Sys)
     preysSystematic <- map2Systematic(allProt = allPreys, tableList = tableList, sWAC = sWAC2Sys)
 
 
     dataList <- list()
-    
+
     dataList$allBaits <- allBaits
     dataList$allPreys <- allPreys
     dataList$indexSetAll <- indexSetAll
     dataList$baitsSystematic <- baitsSystematic
     dataList$preysSystematic <- preysSystematic
     dataList$shortLabel <- shortLabel
-        
+
     dataList
 
 }
