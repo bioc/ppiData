@@ -46,10 +46,15 @@ createBPList(indexSet, baitsSystematic, preysSystematic)
 \author{T Chiang}
 
 \examples{
-data(y2h)
-eg = y2h$indexSetAll[3]
-eg1 = y2h$baitsSystematic[3]
-eg2 = y2h$preysSystematic[3]
-createBPList(eg, eg1, eg2)
+library(ppiStats)
+library(org.Sc.sgd.db)
+
+dataList <- collectIntactPPIData(c("EBI-531419", "EBI-698096","EBI-762635"))
+
+createBPList(
+    dataList[["indexSetAll"]],
+    dataList[["baitsSystematic"]],
+    dataList[["preysSystematic"]]
+)
 }
 \keyword{datagen}

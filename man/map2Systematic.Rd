@@ -29,7 +29,7 @@ map2Systematic(allProt, tableList, sWAC)
 
 \examples{
 data(sWAC2Sys)
-dataL = collectIntactData("EBI-375746")
-sysN = map2Systematic(dataL$allBaits, dataL$tableList, sWAC2Sys)
+dataL <- collectIntactPPIData("EBI-375746")
+sysN <- map2Systematic(dataL$allBaits, dataL$tableList, sWAC2Sys)
 }
 \keyword{datagen}

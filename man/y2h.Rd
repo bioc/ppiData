@@ -22,11 +22,8 @@
   lists is named by an individual viable bait of that experiment. 
   Each viable bait list contains a character vector of the viable
   preys dectect by the corresponding viable bait.
-
-  For a more in depth summary, please see the intactPPIData.Rnw file.
 }
 \examples{
 data(y2h)
-
 }
 \keyword{datasets}
