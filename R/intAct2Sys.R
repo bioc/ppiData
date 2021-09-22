@@ -1,5 +1,4 @@
 intAct2Sys <- function(prot2Sys, bpSysL) {
-    options(error=recover)
     ind <- bpSysL[[prot2Sys]]
     bpnames <- names(ind)
     if (!all(is.null(bpnames)) && !all(is.na(bpnames))) {
