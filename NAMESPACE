@@ -1,4 +1,7 @@
 import(graph)
 importFrom(AnnotationDbi, as.list)
 importFrom(utils, data, recover)
-exportPattern(".")
+export(
+    collectIntactPPIData, createBPList, intAct2Sys,
+    map2Systematic, map2Systematic2
+)
